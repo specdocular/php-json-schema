@@ -1,0 +1,134 @@
+<?php
+
+namespace Specdocular\JsonSchema\Draft202012\Concerns;
+
+use Specdocular\JsonSchema\Draft202012\Contracts\JSONSchema;
+use Specdocular\JsonSchema\Draft202012\Keywords\Constant;
+use Specdocular\JsonSchema\Draft202012\Keywords\Properties\Property;
+use Specdocular\JsonSchema\Draft202012\LooseFluentDescriptor;
+use Specdocular\JsonSchema\Draft202012\StrictFluentDescriptor;
+
+trait HasGetters
+{
+    public function getType(): array|string|null
+    {
+        return $this->type?->value();
+    }
+
+    /**
+     * Get the properties defined in this schema.
+     *
+     * @return Property[]|null
+     */
+    public function getProperties(): array|null
+    {
+        return $this->properties?->value();
+    }
+
+    public function getExamples(): array|null
+    {
+        return $this->examples?->value();
+    }
+
+    public function getEnum(): array|null
+    {
+        // Assert::null($this->type, 'Only Enum type can have enum values.');
+
+        return $this->enum?->value();
+    }
+
+    public function getConstant(): Constant|null
+    {
+        return $this->constant;
+    }
+
+    public function getItems(): StrictFluentDescriptor|null
+    {
+        return $this->items?->value();
+    }
+
+    public function getMaxLength(): int|null
+    {
+        return $this->maxLength?->value();
+    }
+
+    public function getMinLength(): int|null
+    {
+        return $this->minLength?->value();
+    }
+
+    public function getMaximum(): float|null
+    {
+        return $this->maximum?->value();
+    }
+
+    public function getMinimum(): float|null
+    {
+        return $this->minimum?->value();
+    }
+
+    public function getFormat(): string|null
+    {
+        return $this->format?->value();
+    }
+
+    /**
+     * @return LooseFluentDescriptor[]|null
+     */
+    public function getAllOf(): array|null
+    {
+        return $this->allOf?->value();
+    }
+
+    /**
+     * @return LooseFluentDescriptor[]|null
+     */
+    public function getAnyOf(): array|null
+    {
+        return $this->anyOf?->value();
+    }
+
+    /**
+     * @return LooseFluentDescriptor[]|null
+     */
+    public function getOneOf(): array|null
+    {
+        return $this->oneOf?->value();
+    }
+
+    /** @return string[]|null */
+    public function getRequired(): array|null
+    {
+        return $this->required?->value();
+    }
+
+    public function getNot(): JSONSchema|null
+    {
+        return $this->not?->value();
+    }
+
+    public function getIf(): JSONSchema|null
+    {
+        return $this->if?->value();
+    }
+
+    public function getThen(): JSONSchema|null
+    {
+        return $this->then?->value();
+    }
+
+    public function getElse(): JSONSchema|null
+    {
+        return $this->else?->value();
+    }
+
+    public function getDescription(): string|null
+    {
+        return $this->description?->value();
+    }
+
+    public function getPattern(): string|null
+    {
+        return $this->pattern?->value();
+    }
+}

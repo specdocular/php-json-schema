@@ -1,0 +1,40 @@
+<?php
+
+namespace Specdocular\JsonSchema\Draft202012\Keywords;
+
+use Specdocular\JsonSchema\Draft202012\Contracts\Keyword;
+
+/**
+ * The "minimum" keyword sets an inclusive lower limit for numeric values.
+ *
+ * The numeric instance must be greater than or equal to this value.
+ *
+ * @see https://json-schema.org/draft/2020-12/json-schema-validation#section-6.2.4
+ */
+final readonly class Minimum implements Keyword
+{
+    private function __construct(
+        private float $value,
+    ) {
+    }
+
+    public static function create(float $value): self
+    {
+        return new self($value);
+    }
+
+    public static function name(): string
+    {
+        return 'minimum';
+    }
+
+    public function jsonSerialize(): float
+    {
+        return $this->value();
+    }
+
+    public function value(): float
+    {
+        return $this->value;
+    }
+}
