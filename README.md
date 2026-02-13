@@ -1,11 +1,10 @@
 # PHP JSON Schema
 
-[![Tests](https://github.com/specdocular/php-json-schema/actions/workflows/tests.yml/badge.svg)](https://github.com/specdocular/php-json-schema/actions/workflows/tests.yml)
-[![Code Style](https://github.com/specdocular/php-json-schema/actions/workflows/php-cs-fixer.yml/badge.svg)](https://github.com/specdocular/php-json-schema/actions/workflows/php-cs-fixer.yml)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/specdocular/php-json-schema.svg)](https://packagist.org/packages/specdocular/php-json-schema)
 [![PHP Version](https://img.shields.io/packagist/php-v/specdocular/php-json-schema.svg)](https://packagist.org/packages/specdocular/php-json-schema)
-[![License](https://img.shields.io/packagist/l/specdocular/php-json-schema.svg)](https://packagist.org/packages/specdocular/php-json-schema)
+[![Tests](https://github.com/specdocular/php-json-schema/actions/workflows/tests.yml/badge.svg)](https://github.com/specdocular/php-json-schema/actions/workflows/tests.yml)
 [![codecov](https://codecov.io/gh/specdocular/php-json-schema/graph/badge.svg)](https://codecov.io/gh/specdocular/php-json-schema)
+[![Code Style](https://github.com/specdocular/php-json-schema/actions/workflows/php-cs-fixer.yml/badge.svg)](https://github.com/specdocular/php-json-schema/actions/workflows/php-cs-fixer.yml)
 
 A type-safe, fluent PHP implementation of [JSON Schema Draft 2020-12](https://json-schema.org/draft/2020-12/json-schema-core).
 
