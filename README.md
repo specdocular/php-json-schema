@@ -8,6 +8,10 @@
 
 A type-safe, fluent PHP implementation of [JSON Schema Draft 2020-12](https://json-schema.org/draft/2020-12/json-schema-core).
 
+## Requirements
+
+- PHP 8.2 or higher
+
 ## Installation
 
 ```bash
@@ -59,6 +63,14 @@ $json = json_encode($schema, JSON_PRETTY_PRINT);
 | [specdocular/php-openapi](https://github.com/specdocular/php-openapi) | Object-oriented OpenAPI 3.1.x builder (uses this package) |
 | [specdocular/laravel-rules-to-schema](https://github.com/specdocular/laravel-rules-to-schema) | Convert Laravel validation rules to JSON Schema (uses this package) |
 | [specdocular/laravel-openapi](https://github.com/specdocular/laravel-openapi) | Laravel integration for OpenAPI generation |
+
+## Contributing
+
+Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for setup, the required checks, and versioning.
+
+## Security
+
+If you discover a security vulnerability, please follow the process in [SECURITY.md](SECURITY.md) rather than opening a public issue.
 
 ## License
 
